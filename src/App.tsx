@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { Button } from "./components/common/Button/Button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -9,13 +10,6 @@ function App() {
   return (
     <>
       <div>
-        <div className="bg-blue-500 text-white p-4">
-          <h1 className="text-2xl">Hello, Tailwind CSS in React!</h1>
-
-          <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 mt-4 rounded">
-            Click Me
-          </button>
-        </div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -25,9 +19,9 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>

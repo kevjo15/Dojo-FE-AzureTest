@@ -5,8 +5,8 @@ import { Button } from "./Button";
 const handleClickMock = jest.fn();
 
 describe("Button component", () => {
-  it("renders with given text", () => {
-    render(<Button onClick={handleClickMock} text="Click Me" />);
+  it("renders with given content", () => {
+    render(<Button onClick={handleClickMock}>Click Me</Button>);
 
     const button = screen.getByText("Click Me");
 
@@ -14,7 +14,7 @@ describe("Button component", () => {
   });
 
   it("calls onClick handler when clicked", () => {
-    render(<Button onClick={handleClickMock} text="Click Me" />);
+    render(<Button onClick={handleClickMock}>Click Me</Button>);
 
     const button = screen.getByText("Click Me");
     button.click();
