@@ -25,7 +25,7 @@ describe("Button component", () => {
   it("fails", () => {
     render(<Button onClick={handleClickMock}>Click Me</Button>);
 
-    const button = screen.getByText("non existing");
+    const button = screen.queryByText("non existing");
 
     expect(button).toBeInTheDocument();
   });
