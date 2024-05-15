@@ -12,6 +12,7 @@ and visually appealing user interface.
 - [Project Structure](#project-structure)
 - [Technologies](#technologies)
 - [Features](#features)
+- [Testing](#testing)
 - [Contributing](#contributing)
 - [Code Conventions](#code-conventions)
 
@@ -57,6 +58,12 @@ This project is structured to support scalability and maintainability:
 - **Course Management**: Teachers can create, update, and delete courses.
 - **Course Viewing**: Students can view and learn from courses.
 - **Responsive Design**: Tailored for various screen sizes.
+
+## Testing
+
+The project uses Jest for testing. To run the test suite, execute `npm test` in your terminal. This command will run all
+the tests written for the application. To run specific tests, execute `npm test {path, folder or test file name}` in your
+terminal.
 
 ## Code Conventions
 
