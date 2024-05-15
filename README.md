@@ -50,8 +50,8 @@ This project is structured to support scalability and maintainability:
   - `App.tsx`: The main component that wraps around the entire application, typically including routing and layout configurations.
   - `index.css`: Global stylesheets.
   - `main.tsx`: The entry point of the React application, where the root component (App) is rendered into the DOM.
-- `Eslintrc.cjs`, `Jest.config.js`, `Package-lock.json`, `Postcss.config.js`, `SetupTests.ts`, `Tailwind.config.js`,
-  `Tsconfig.json`, `Tsconfig.node.json`, `Vite.config.ts` - settings for various tools and libraries used in the project,
+- `.eslintrc.cjs`, `jest.config.js`, `package-lock.json`, `postcss.config.js`, `setupTests.ts`, `tailwind.config.js`,
+  `tsconfig.json`, `tsconfig.node.json`, `vite.config.ts` - settings for various tools and libraries used in the project,
   including ESLint for linting, Jest for testing, PostCSS for processing CSS, Tailwind CSS for styling, TypeScript for static typing,
   and Vite for building and serving the application.
 - `package.json`: Lists the project's dependencies, scripts, version, and other metadata.
