@@ -1,4 +1,4 @@
-# Dojo FE - Frontend React TypeScript with Tailwind CSS
+`# Dojo FE - Frontend React TypeScript with Tailwind CSS
 
 This project is the frontend solution for interacting with the
 [Dojo BE - Backend C# ASP.NET Core Web API](https://github.com/InFiNet-Code-AB/Dojo-BE). It is built using
@@ -38,20 +38,23 @@ from the [official Node.js website](https://nodejs.org/).
 
 This project is structured to support scalability and maintainability:
 
-- **public**: Contains static assets like images and fonts.
-- **src**: Contains the source code of the application.
-  - **Components**: React components used throughout the application.
-    - **common**: Shared components used across different parts of the application
-    - **features**: Feature-specific components, tailored to individual functionalities within the app.
-  - **Constants**: Constants used throughout the application, such as API endpoints.
-  - **Services**: Services for making API calls to the backend.
-  - **Types**: TypeScript type definitions and interfaces.
-  - **Utils**: Utility functions and helpers that are used across various parts of the application for common tasks.
-  - **App.css**: The global CSS stylesheet for the application.
-  - **App.tsx**: The main component that wraps around the entire application, typically including routing and layout configurations.
-  - **index.css**: Additional global stylesheets.
-  - **main.tsx**: The entry point of the React application, where the root component (App) is rendered into the DOM.
-- **Eslintrc.cjs**, **Jest.config.js**, **Package-lock.json**, **Postcss.config.js**, **SetupTests.ts**, **Tailwind.config.js**, **Tsconfig.json**, **Tsconfig.node.json**, **Vite.config.ts**
+- `public/`: Contains static assets like images and fonts.
+- `src/`: Contains the source code of the application.
+  - `components/`: React components used throughout the application.
+    - `common/`: Shared components used across different parts of the application
+    - `features/`: Feature-specific components, tailored to individual functionalities within the app.
+  - `constants/`: Constants used throughout the application, such as API endpoints.
+  - `services/`: Services for making API calls to the backend.
+  - `types/`: TypeScript type definitions and interfaces.
+  - `utils/`: Utility functions and helpers that are used across various parts of the application for common tasks.
+  - `App.tsx`: The main component that wraps around the entire application, typically including routing and layout configurations.
+  - `index.css`: Global stylesheets.
+  - `main.tsx`: The entry point of the React application, where the root component (App) is rendered into the DOM.
+- `Eslintrc.cjs`, `Jest.config.js`, `Package-lock.json`, `Postcss.config.js`, `SetupTests.ts`, `Tailwind.config.js`,
+  `Tsconfig.json`, `Tsconfig.node.json`, `Vite.config.ts` - settings for various tools and libraries used in the project,
+  including ESLint for linting, Jest for testing, PostCSS for processing CSS, Tailwind CSS for styling, TypeScript for static typing,
+  and Vite for building and serving the application.
+- `package.json`: Lists the project's dependencies, scripts, version, and other metadata.
 
 ## Technologies
 
