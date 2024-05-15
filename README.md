@@ -1,4 +1,4 @@
-`# Dojo FE - Frontend React TypeScript with Tailwind CSS
+# Dojo FE - Frontend React TypeScript with Tailwind CSS
 
 This project is the frontend solution for interacting with the
 [Dojo BE - Backend C# ASP.NET Core Web API](https://github.com/InFiNet-Code-AB/Dojo-BE). It is built using
