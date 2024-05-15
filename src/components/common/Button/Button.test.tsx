@@ -21,4 +21,12 @@ describe("Button component", () => {
 
     expect(handleClickMock).toHaveBeenCalledTimes(1);
   });
+
+  it("fails", () => {
+    render(<Button onClick={handleClickMock}>Click Me</Button>);
+
+    const button = screen.getByText("non existing");
+
+    expect(button).toBeInTheDocument();
+  });
 });
