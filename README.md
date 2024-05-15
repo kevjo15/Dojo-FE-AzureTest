@@ -4,7 +4,8 @@ This project is the frontend solution for interacting with the
 [Dojo BE - Backend C# ASP.NET Core Web API](https://github.com/InFiNet-Code-AB/Dojo-BE). It is built using
 [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/) for a modern, scalable, and maintainable
 web application. The frontend leverages [Tailwind CSS](https://tailwindcss.com/) for styling, ensuring a responsive
-and visually appealing user interface.
+and visually appealing user interface. This project is powered by [Vite](https://vitejs.dev/), enhancing the development
+experience with fast build times and efficient bundling.
 
 ## Table of Contents
 
@@ -40,10 +41,17 @@ This project is structured to support scalability and maintainability:
 - **public**: Contains static assets like images and fonts.
 - **src**: Contains the source code of the application.
   - **Components**: React components used throughout the application.
-  - **Containers**: Higher-level components that manage state and interact with the backend.
+    - **common**: Shared components used across different parts of the application
+    - **features**: Feature-specific components, tailored to individual functionalities within the app.
+  - **Constants**: Constants used throughout the application, such as API endpoints.
   - **Services**: Services for making API calls to the backend.
-  - **Styles**: Contains Tailwind CSS configuration and custom styles.
-- **Tests**: Contains unit and integration tests for the application.
+  - **Types**: TypeScript type definitions and interfaces.
+  - **Utils**: Utility functions and helpers that are used across various parts of the application for common tasks.
+  - **App.css**: The global CSS stylesheet for the application.
+  - **App.tsx**: The main component that wraps around the entire application, typically including routing and layout configurations.
+  - **index.css**: Additional global stylesheets.
+  - **main.tsx**: The entry point of the React application, where the root component (App) is rendered into the DOM.
+- **Eslintrc.cjs**, **Jest.config.js**, **Package-lock.json**, **Postcss.config.js**, **SetupTests.ts**, **Tailwind.config.js**, **Tsconfig.json**, **Tsconfig.node.json**, **Vite.config.ts**
 
 ## Technologies
 
