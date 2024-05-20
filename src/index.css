@@ -3,6 +3,15 @@
 @import "tailwindcss/utilities";
 
 :root {
+  --bg-color: #ffffff; /* Ljus bakgrundsfärg */
+  --text-color: #213547; /* Ljus textfärg */
+  --link-color: #646cff; /* Länkfärg */
+  --link-hover-color: #535bf2; /* Länk hover-färg */
+  --button-bg-color: #f9f9f9; /* Ljus knappbakgrundsfärg */
+  --button-text-color: #213547; /* Ljus knapptextfärg */
+  --button-hover-border-color: #747bff; /* Ljus knapp border hover-färg */
+  --input-bg-color: #f0f0f0; /* Ljus input-bakgrundsfärg */
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -10,6 +19,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
+  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,15 +33,24 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--link-hover-color);
 }
 
 body {
   margin: 0;
   display: flex;
+  flex-direction: column; /* Lägg till detta */
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+#header {
+  width: 100%;
 }
 
 h1 {
@@ -46,16 +65,23 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: var(--button-hover-border-color);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type="search"] {
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (prefers-color-scheme: light) {
@@ -69,4 +95,28 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Dark mode specific styles */
+.dark {
+  --bg-color: #242424; /* Mörk bakgrundsfärg */
+  --text-color: rgba(255, 255, 255, 0.87); /* Mörk textfärg */
+  --link-color: #646cff; /* Länkfärg */
+  --link-hover-color: #535bf2; /* Länk hover-färg */
+  --button-bg-color: #1a1a1a; /* Mörk knappbakgrundsfärg */
+  --button-text-color: #ffffff; /* Mörk knapptextfärg */
+  --button-hover-border-color: #646cff; /* Mörk knapp border hover-färg */
+  --input-bg-color: #3a3a3a; /* Mörk input-bakgrundsfärg */
+}
+.dark a {
+  color: #9d76f8;
+}
+.dark a:hover {
+  color: #cfb0f7;
+}
+.dark button {
+  background-color: #1a1a1a;
+}
+.dark button:hover {
+  border-color: #646cff;
 }
