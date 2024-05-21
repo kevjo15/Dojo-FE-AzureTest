@@ -3,7 +3,7 @@ import Logo from './Logo';
 import SearchBar from './SearchBar';
 import Menu from './Menu';
 import AuthButtons from './AuthButtons';
-import ToggleButton from './ToggleButton';
+import ToggleButton from './MenuToggleButton';
 import DarkModeToggle from './DarkModeToggle';
 
 const Header: React.FC = () => {
