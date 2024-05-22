@@ -13,7 +13,7 @@ const LoginForm: React.FC = () => {
                 <div className="px-4 md:px-0 lg:w-6/12">
                   <div className="md:mx-6 md:p-12">
                     {/* <!--Logo--> */}
-                    <div className="text-center">
+                    <div className="text-center sm:pt-5">
                       <img
                         className="mx-auto w-48 mb-10"
                         src="https://www.infinetcode.se/_next/image?url=%2Flogo-dark-long.png&w=256&q=75"
@@ -62,7 +62,7 @@ const LoginForm: React.FC = () => {
                         <TERipple rippleColor="light">
                           <button
                             type="button"
-                            className="inline-block rounded border-2 border-danger px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-light transition duration-150 ease-in-out hover:border-danger-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-danger-600 focus:border-danger-600 focus:text-danger-600 focus:outline-none focus:ring-0 active:border-danger-700 active:text-danger-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                            className="inline-block rounded border-2 border-purple-500 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-light transition duration-150 ease-in-out hover:border-purple-600 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-purple-600 focus:border-purple-600 focus:text-purple-600 focus:outline-none focus:ring-0 active:border-purple-700 active:text-purple-700 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
                           >
                             Register
                           </button>
