@@ -6,6 +6,7 @@ import HtmlLogo from "../../../assets/Html.png";
 import JsLogo from "../../../assets/Js.png";
 import PythonLogo from "../../../assets/Python.png";
 import ReactLogo from "../../../assets/React.png";
+import CPlusPlus from "../../../assets/CPlusPlus.png";
 
 const RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -222,6 +223,11 @@ const RegisterForm: React.FC = () => {
                     <img
                       src={ReactLogo}
                       alt="React Logo"
+                      className="w-20 h-20 m-2"
+                    />
+                    <img
+                      src={CPlusPlus}
+                      alt="CPlusPlus Logo"
                       className="w-20 h-20 m-2"
                     />
                   </div>
