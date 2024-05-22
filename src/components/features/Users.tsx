@@ -8,6 +8,7 @@ export const Users = () => {
   useEffect(() => {
     const getUsers = async () => {
       const data = await fetchUsers();
+      console.log(data);
       setUsers(data);
     };
 

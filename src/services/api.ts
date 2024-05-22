@@ -3,7 +3,7 @@ import { User } from "../types/User";
 
 export const fetchUsers = async (): Promise<User[]> => {
   try {
-    const response = await fetch(USERS_API_URL);
+    const response = await fetch(USERS_API_URL, { headers: { accept: "*/*" } });
     if (!response.ok) {
       throw new Error(
         `Fetching users failed with HTTP status: ${response.status}`
