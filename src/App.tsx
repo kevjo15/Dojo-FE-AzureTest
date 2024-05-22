@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "./components/common/Button/Button";
 import { Users } from "./components/features/Users";
-import Header from "./components/common/NavigationBar/Header";
+import Header from "./components/common/NavigationBar/Header/Header";
 import AdBanner from './components/common/AdBanner';
 
 function App() {

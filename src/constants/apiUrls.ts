@@ -1,1 +1,1 @@
-export const USERS_API_URL = "https://jsonplaceholder.typicode.com/users";
+export const USERS_API_URL = "https://localhost:7036/api/User/GetAllUsers";
