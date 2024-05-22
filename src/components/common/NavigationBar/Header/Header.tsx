@@ -6,7 +6,11 @@ import AuthButtons from "./components/AuthButtons";
 import ToggleButton from "./components/MenuToggleButton";
 import DarkModeToggle from "./components/DarkModeToggle";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onLoginClick: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onLoginClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,7 +29,7 @@ const Header: React.FC = () => {
         <Menu />
         <div className="flex items-center justify-between w-full lg:w-auto mt-4 lg:mt-0 ">
           <SearchBar />
-          <AuthButtons />
+          <AuthButtons onLoginClick={onLoginClick} />
           <div className="flex items-center ml-auto">
             <DarkModeToggle />
           </div>

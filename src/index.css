@@ -19,7 +19,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -46,7 +45,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
-
 }
 
 #header {
@@ -120,4 +118,3 @@ input[type="search"] {
 .dark button:hover {
   border-color: #646cff;
 }
-
