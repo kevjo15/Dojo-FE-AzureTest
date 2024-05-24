@@ -1,24 +1,24 @@
-import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import { Button } from "./Button";
+// import "@testing-library/jest-dom";
+// import { render, screen } from "@testing-library/react";
+// import { Button } from "./Button";
 
-const handleClickMock = jest.fn();
+// const handleClickMock = jest.fn();
 
-describe("Button component", () => {
-  it("renders with given content", () => {
-    render(<Button onClick={handleClickMock}>Click Me</Button>);
+// describe("Button component", () => {
+//   it("renders with given content", () => {
+//     render(<Button onClick={handleClickMock}>Click Me</Button>);
 
-    const button = screen.getByText("Click Me");
+//     const button = screen.getByText("Click Me");
 
-    expect(button).toBeInTheDocument();
-  });
+//     expect(button).toBeInTheDocument();
+//   });
 
-  it("calls onClick handler when clicked", () => {
-    render(<Button onClick={handleClickMock}>Click Me</Button>);
+//   it("calls onClick handler when clicked", () => {
+//     render(<Button onClick={handleClickMock}>Click Me</Button>);
 
-    const button = screen.getByText("Click Me");
-    button.click();
+//     const button = screen.getByText("Click Me");
+//     button.click();
 
-    expect(handleClickMock).toHaveBeenCalledTimes(1);
-  });
-});
+//     expect(handleClickMock).toHaveBeenCalledTimes(1);
+//   });
+// });

@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import Logo from "./components/Logo";
+import Logo from "../../InfinetLogo/InfinetLogo";
 import SearchBar from "./components/SearchBar";
 import Menu from "./components/Menu";
 import AuthButtons from "./components/AuthButtons";
 import ToggleButton from "./components/MenuToggleButton";
 import DarkModeToggle from "./components/DarkModeToggle";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onSignUpClick: () => void; // Definiera props för funktionen
+}
+
+const Header: React.FC<HeaderProps> = ({ onSignUpClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -25,7 +29,8 @@ const Header: React.FC = () => {
         <Menu />
         <div className="flex items-center justify-between w-full lg:w-auto mt-4 lg:mt-0 ">
           <SearchBar />
-          <AuthButtons />
+          <AuthButtons onSignUpClick={onSignUpClick} />{" "}
+          {/* Passera funktionen som prop */}
           <div className="flex items-center ml-auto">
             <DarkModeToggle />
           </div>
