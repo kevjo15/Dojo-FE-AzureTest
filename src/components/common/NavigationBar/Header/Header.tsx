@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "./components/Logo";
+import Logo from "../../InfinetLogo/InfinetLogo";
 import SearchBar from "./components/SearchBar";
 import Menu from "./components/Menu";
 import AuthButtons from "./components/AuthButtons";
