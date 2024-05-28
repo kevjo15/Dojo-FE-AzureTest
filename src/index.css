@@ -95,6 +95,12 @@ input[type="search"] {
   }
 }
 
+@media (min-width: 320px) {
+  .container {
+    max-width: none !important;
+  }
+}
+
 /* Dark mode specific styles */
 .dark {
   --bg-color: #242424; /* Mörk bakgrundsfärg */

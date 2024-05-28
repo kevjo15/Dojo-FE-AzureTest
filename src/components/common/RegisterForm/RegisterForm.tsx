@@ -34,7 +34,7 @@ const RegisterForm: React.FC = () => {
     <section className="h-full bg-neutral-200 dark:bg-neutral-700 rounded-lg">
       <div className="container h-full p-10">
         <div className="g-6 flex h-full flex-wrap items-center justify-center text-neutral-800 dark:text-neutral-200">
-          <div className="w-full max-w-8xl mx-auto">
+          <div className="w-full max-w-md md:max-w-2xl lg:max-w-6xl">
             <div className="block rounded-lg bg-white shadow-lg dark:bg-neutral-800">
               <div className="g-0 lg:flex lg:flex-wrap">
                 {/* <!-- Left column container--> */}
