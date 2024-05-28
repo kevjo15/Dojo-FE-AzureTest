@@ -41,7 +41,7 @@ const RegisterForm: React.FC = () => {
                 <div className="px-4 md:px-0 lg:w-6/12">
                   <div className="md:mx-6 md:p-12">
                     {/* Logo */}
-                    <div className="flex justify-center sm:pt-2 mb-6">
+                    <div className="flex justify-center pt-6 sm:pt-5 md:pt-0 mb-5">
                       <Logo />
                     </div>
                     <form onSubmit={handleSubmit}>
