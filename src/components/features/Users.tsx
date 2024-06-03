@@ -8,7 +8,6 @@ export const Users = () => {
   useEffect(() => {
     const getUsers = async () => {
       const data = await fetchUsers();
-      console.log(data);
       setUsers(data);
     };
 
@@ -19,17 +18,19 @@ export const Users = () => {
     <div className="bg-gradient-to-r from-violet-500 to-fuchsia-500 p-8 hover:bg-gradient-to-l rounded-md mb-8">
       <h2 className="text-2xl font-bold mb-6">User List</h2>
 
-      <div className="grid grid-cols-3 gap-8 font-bold">
+      <div className="grid grid-cols-4 gap-8 font-bold">
         <div>Name</div>
+        <div>Lastname</div>
         <div>Email</div>
-        <div>Company</div>
+        <div>Role</div>
       </div>
 
-      {users.map(({ id, name, email, company }) => (
-        <div key={id} className="grid grid-cols-3 gap-8">
-          <div>{name}</div>
+      {users.map(({ id, firstName, lastName, email, role }) => (
+        <div key={id} className="grid grid-cols-4 gap-8">
+          <div>{firstName}</div>
+          <div>{lastName}</div>
           <div>{email}</div>
-          <div>{company.name}</div>
+          <div>{role}</div>
         </div>
       ))}
     </div>
