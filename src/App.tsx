@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Users } from "./components/features/Users";
 import Header from "./components/common/NavigationBar/Header/Header";
 import AdBanner from "./components/common/AdBanner";

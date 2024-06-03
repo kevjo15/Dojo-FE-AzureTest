@@ -12,14 +12,45 @@ interface RegisterTextBoxesProps {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const RegisterTextBoxes: React.FC<RegisterTextBoxesProps> = ({}) => {
+const RegisterTextBoxes: React.FC<RegisterTextBoxesProps> = ({
+  formData,
+  handleChange,
+}) => {
   return (
     <>
-      <TextBox label="First Name" className="mb-4" />
-      <TextBox label="Last Name" className="mb-4" />
-      <TextBox label="Email" type="email" className="mb-4" />
-      <TextBox label="Password" type="password" className="mb-4" />
-      <TextBox label="Confirm Password" type="password" className="mb-4" />
+      <TextBox
+        label="First Name"
+        className="mb-4"
+        value={formData.firstName}
+        onChange={handleChange}
+      />
+      <TextBox
+        label="Last Name"
+        className="mb-4"
+        value={formData.lastName}
+        onChange={handleChange}
+      />
+      <TextBox
+        label="Email"
+        type="email"
+        className="mb-4"
+        value={formData.email}
+        onChange={handleChange}
+      />
+      <TextBox
+        label="Password"
+        type="password"
+        className="mb-4"
+        value={formData.password}
+        onChange={handleChange}
+      />
+      <TextBox
+        label="Confirm Password"
+        type="password"
+        className="mb-4"
+        value={formData.confirmPassword}
+        onChange={handleChange}
+      />
     </>
   );
 };
