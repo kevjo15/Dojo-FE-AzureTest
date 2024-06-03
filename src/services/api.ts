@@ -12,7 +12,7 @@ export const fetchUsers = async (): Promise<User[]> => {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error("Jebi ga:", error);
+    console.error("GodDamn:", error);
     throw error;
   }
 };
