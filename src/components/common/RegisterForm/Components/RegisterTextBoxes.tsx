@@ -1,5 +1,5 @@
 import React from "react";
-import TextBox from "../../TextBox/TextBox";
+import { TEInput } from "tw-elements-react";
 
 interface RegisterTextBoxesProps {
   formData: {
@@ -18,33 +18,48 @@ const RegisterTextBoxes: React.FC<RegisterTextBoxesProps> = ({
 }) => {
   return (
     <>
-      <TextBox
-        label="First Name"
+      <TEInput
+        name="firstName"
+        type="text"
+        label="FirstName"
         className="mb-4"
         value={formData.firstName}
         onChange={handleChange}
       />
-      <TextBox
-        label="Last Name"
+      <TEInput
+        name="firstName"
+        type="text"
+        label="FirstName"
+        className="mb-4"
+        value={formData.firstName}
+        onChange={handleChange}
+      />
+      <TEInput
+        name="lastName"
+        type="text"
+        label="LastName"
         className="mb-4"
         value={formData.lastName}
         onChange={handleChange}
       />
-      <TextBox
+      <TEInput
+        name="email"
         label="Email"
         type="email"
         className="mb-4"
         value={formData.email}
         onChange={handleChange}
       />
-      <TextBox
+      <TEInput
+        name="password"
         label="Password"
         type="password"
         className="mb-4"
         value={formData.password}
         onChange={handleChange}
       />
-      <TextBox
+      <TEInput
+        name="confirmPassword"
         label="Confirm Password"
         type="password"
         className="mb-4"
