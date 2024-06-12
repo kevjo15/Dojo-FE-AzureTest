@@ -5,9 +5,11 @@ import RoleCheckboxes from "../RegisterForm/Components/RoleCheckboxes";
 import Button from "../Button/Button";
 import WideButton from "../Button/WideButton";
 import ProgrammingLogos from "../ProgrammingLogos/ProgammingLogos";
+import { RegisterUserDTO } from "../../../types/User";
+import { registerUser } from "../../../services/api";
 
 const RegisterForm: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<RegisterUserDTO>({
     firstName: "",
     lastName: "",
     email: "",
@@ -15,6 +17,9 @@ const RegisterForm: React.FC = () => {
     confirmPassword: "",
     role: "Student", // Default role
   });
+
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -24,10 +29,21 @@ const RegisterForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission, e.g., send formData to backend
-    console.log(formData);
+    setError(null);
+    setSuccess(null);
+
+    console.log("Sending data:", formData); // Logga data som skickas
+    try {
+      await registerUser(formData);
+      alert("Registration successful!");
+      setSuccess("Registration successful!");
+      setError(null);
+    } catch (error) {
+      console.error("Error registering user:", error);
+      setError("Registration failed. Please try again.");
+    }
   };
 
   return (
