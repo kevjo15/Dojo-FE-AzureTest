@@ -18,8 +18,8 @@ const RegisterForm: React.FC = () => {
     role: "Student", // Default role
   });
 
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState<string | null>(null);
+  //const [error, setError] = useState<string | null>(null);
+  //const [success, setSuccess] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -31,18 +31,18 @@ const RegisterForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError(null);
-    setSuccess(null);
+    //setError(null);
+    //setSuccess(null);
 
     console.log("Sending data:", formData); // Logga data som skickas
     try {
       await registerUser(formData);
       alert("Registration successful!");
-      setSuccess("Registration successful!");
-      setError(null);
+      //setSuccess("Registration successful!");
+      //setError(null);
     } catch (error) {
       console.error("Error registering user:", error);
-      setError("Registration failed. Please try again.");
+      //setError("Registration failed. Please try again.");
     }
   };
 
